@@ -1,6 +1,3 @@
-# from .pycore.tikzeng import *
-# from .pycore.blocks import *
-
 from pathlib import Path
 
 def Head(border=8):
