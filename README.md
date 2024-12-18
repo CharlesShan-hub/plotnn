@@ -40,3 +40,19 @@ res
    ```bash
    ./plotnn lenet
    ```
+
+5. Pypi + Conda-forge
+   1. 在 pyproject.toml同级目录，构建 pypi
+      1. `python setup.py build`
+      2. `python setup.py sdist`
+      3. `python setup.py sdist build`
+      4. 去`.pypirc`里，写上用户名密码，因为这也要上传到 github，所以我传完又删了
+      5. `twine upload dist/*`
+   2.  推送到 conda-forge
+       1. 去 fork https://github.com/conda-forge/staged-recipes
+       2. 把 fork 后的（比如 https://github.com/CharlesShan-hub/staged-recipes clone 到本地）
+       3. 在 recipes 下边新建文件夹，（比如 /Users/kimshan/Public/project/staged-recipes/recipes/plotnn）
+       4. 把 recipes/example/meta.yaml 复制一份到新建的文件夹下边，下边开始填写 meta.yaml
+       5. 去 pypi 上边，点到包的下载按钮，获取 url 和 sha
+       6. 在自己的 staged-recipes 选择申请 pull request，按照机器人给的意见修改 meta.yaml
+       7. 如果不能通过测试，原因是 import plotnn failed，有个权宜之计，把 meta.yaml里边的 import 改成别的包

@@ -5,6 +5,7 @@ description = "Modfied from PlotNeuralNet in github"
 authors = [{name = "Charles", email = "charles.shht@gmail.com"}]
 requires-python = ">=3.7"
 dependencies = []
+license = {text = "MIT License"}
 
 [build-system]
 requires = ["setuptools>=42", "wheel"]

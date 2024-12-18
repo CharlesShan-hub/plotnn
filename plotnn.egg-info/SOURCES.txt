@@ -1,5 +1,6 @@
+README.md
+pyproject.toml
 setup.py
-plotnn/__init__.py
 plotnn.egg-info/PKG-INFO
 plotnn.egg-info/SOURCES.txt
 plotnn.egg-info/dependency_links.txt
